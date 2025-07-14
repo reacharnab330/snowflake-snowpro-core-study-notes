@@ -8,12 +8,15 @@
 * Encryption at every level, see [Hierarchical encryption key model](https://docs.snowflake.com/en/user-guide/security-encryption-manage.html#hierarchical-key-model)
   * Root Key
   * Account master Key - each account has its own key
-  * Object Master Keys - each object has its own key
+  * Object/Table Master Keys - each object has its own key
   * File Keys - each micro-partition file has its own key
 * Automatic key expiration and rotation with no customer impact every 30 days. Key states:
   * active: used for encryption and decryption
   * retired: used for decryption of data previously encrypted with that key
   * destroyed: no longer used
+* Key rotation vs periodic re-keying
+  *  Key rotation is moving the key from active to retired state -- every 30 days
+  *  Periodic re-keying is destroying the retired key & using a new key to encrypt anything that was using the to-be destroyed key -- every 12 months 
 * Enterprise Edition and above can enable automatic annual re-keying
 * Tri-Secret Secure or Bring Your Own Key
   * uses a composite master key which is a composite of a customer-maintained key with a Snowflake-managed key
