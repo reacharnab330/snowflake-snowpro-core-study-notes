@@ -51,6 +51,7 @@ Access historical data at any point of time within a defined retention time peri
 * Allows fixing common mistakes
   * `UNDROP` a DB/Schema/Table
     * Attempting to restore an object with a name that already exists will result in an error
+    * AT, BEFORE and UNDROP are three SQL extensions that Snowflake added for use with the Time Travel feature
   * Access the previous state of a table with [AT or BEFORE](https://docs.snowflake.com/en/sql-reference/constructs/at-before.html)
     * Query the data in its previous state
     * Clone a DB/Schema/Table from its preivous state
