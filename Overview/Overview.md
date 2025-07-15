@@ -80,6 +80,15 @@
 * Allows access to previous versions of the data - the data in its state at a point of time in the past
 * A minimum of Enterprise edition required for time travel longer than 1 day, up to 90 days
 * The period of time travel can be set by database, schema or table
+* Three sql extensions -> undrop, at, before. Before does not include the statement id supplied in the query, it considers the state before that query was applied.
+* Time travel along with cloning can restore and object from a past date
+* standard edition can set DATA_RETENTION_TIME_IN_DAYS value either 0 or 1
+* If DATA_RETENTION_TIME_IN_DAYS parameter was set on all levels, the child object takes precedence
+* Default DATA_RETENTION_TIME_IN_DAYS is set to 1 day for account, database, schema and table objects
+* Minimum value for DATA_RETENTION_TIME_IN_DAYS is zero, means time travel is turned off. Maximum value is 90
+* For temporary and transient objects across all editions of Snowflake, the max retention period can either be set to zero or one.
+* If a table, schema or database already exists with the name of the dropped object, which is being restored, an error will be returned
+* To check which objects have been dropped, you can use a SHOW OBJECT HISTORY command
 
 ### Fail-Safe ###
 * A data backup feature
