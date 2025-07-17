@@ -12,4 +12,3 @@
 10. A storage integration object encapsulates all the required information to authenticate and gain access to a private external storage service to perform actions like reading, writing and deleting, typically using a generated identity entity such as a role in AWS. It can be applied across stages and is recommended to avoid having to explicitly set sensitive information for each stage definition.
 
 
-Snowflake provide the put command,
