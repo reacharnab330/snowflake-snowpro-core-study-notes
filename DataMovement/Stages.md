@@ -1,3 +1,5 @@
+# Stages #
+
 1. Stages form a crucial step in the data movement process. They're an area to temporarily hold raw data files either before being loaded into a table or after being unloaded from a table.
 2. Stages are of two types viz external and internal
 3. Internal stages can be of 3 types , user stage, table stage , named stage. External stage can be of one time i.e. named stage
