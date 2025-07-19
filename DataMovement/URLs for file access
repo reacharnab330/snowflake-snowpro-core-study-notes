@@ -1,3 +1,5 @@
+# URLs for file access #
+
 Scoped URL
 Encoded URL that permits temporary access to a staged file without granting privileges to the stage.
 
